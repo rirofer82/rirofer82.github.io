@@ -8,9 +8,12 @@ assets/js/lang.js enseña el del navegador (o el que elija el visitante).
 
 Para publicar: commit y push a main; GitHub Pages sirve la rama main tal cual.
 """
-import os
+import hashlib, os
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+# versión de los estilos y del JS en la URL (?v=…): así el navegador no mezcla páginas nuevas con estilos viejos en caché
+VER = {k: hashlib.md5(open(os.path.join(ROOT, 'assets', d, f), 'rb').read()).hexdigest()[:8]
+       for k, d, f in (('css', 'css', 'site.css'), ('js', 'js', 'lang.js'))}
 LANGS = ['es', 'en', 'fr', 'pt']
 NAMES = {'es': 'Español', 'en': 'English', 'fr': 'Français', 'pt': 'Português'}
 EMAIL = 'rr2apps@gmail.com'
@@ -175,8 +178,8 @@ def page(path, titles, body, desc, dark=False):
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Nunito:wght@500;700;800&display=swap">
 <meta property="og:image" content="https://rirofer82.github.io/assets/img/og.jpg">
-<link rel="stylesheet" href="{up}assets/css/site.css">
-<script src="{up}assets/js/lang.js"></script>
+<link rel="stylesheet" href="{up}assets/css/site.css?v={VER["css"]}">
+<script src="{up}assets/js/lang.js?v={VER["js"]}"></script>
 </head>
 <body>
 <header class="top"><div class="wrap">
