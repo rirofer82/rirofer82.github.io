@@ -12,7 +12,7 @@ import os
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 LANGS = ['es', 'en', 'fr', 'pt']
-EMAIL = 'riroferadmob@gmail.com'
+EMAIL = 'rr2apps@gmail.com'
 DEV = 'RRF-APPS'
 PLAY_URL = 'https://play.google.com/store/apps/details?id=io.github.rirofer82.deepdoku'
 PLAY_LIVE = False          # cámbialo a True cuando Deepdoku esté publicado en Google Play
