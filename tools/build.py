@@ -35,10 +35,42 @@ HOME = {
     'title': {'es': 'RRF-APPS', 'en': 'RRF-APPS', 'fr': 'RRF-APPS', 'pt': 'RRF-APPS'},
     'h1': {'es': 'Juegos y utilidades <span>para tu móvil</span>', 'en': 'Games and tools <span>for your phone</span>',
            'fr': 'Jeux et outils <span>pour ton mobile</span>', 'pt': 'Jogos e utilitários <span>para o seu celular</span>'},
-    'lead': {'es': 'Juegos cortos para el móvil, con reglas que se entienden en un minuto.',
-             'en': 'Short mobile games with rules you learn in a minute.',
-             'fr': 'Des jeux mobiles courts, avec des règles qu\'on comprend en une minute.',
-             'pt': 'Jogos curtos para celular, com regras que você aprende em um minuto.'},
+    'lead': {'es': 'En RRF-APPS hacemos juegos y utilidades para Android pensados para ratos cortos: abres la app, entiendes las reglas en un minuto y en un par de partidas ya estás pensando el siguiente movimiento. Nada de tutoriales eternos ni menús llenos de botones: el juego es lo primero.',
+             'en': 'At RRF-APPS we make Android games and tools for short breaks: you open the app, get the rules in a minute and, a couple of rounds later, you are already planning your next move. No endless tutorials or menus full of buttons: the game comes first.',
+             'fr': 'Chez RRF-APPS, nous créons des jeux et des outils pour Android pensés pour les petites pauses : tu ouvres l\'appli, tu comprends les règles en une minute et, après deux parties, tu réfléchis déjà à ton prochain coup. Pas de tutoriels interminables ni de menus remplis de boutons : le jeu passe en premier.',
+             'pt': 'Na RRF-APPS fazemos jogos e utilitários para Android pensados para momentos rápidos: você abre o app, entende as regras em um minuto e, depois de duas partidas, já está planejando a próxima jogada. Nada de tutoriais intermináveis nem menus cheios de botões: o jogo vem primeiro.'},
+    'values_h': {'es': 'Cómo hacemos nuestras apps', 'en': 'How we make our apps', 'fr': 'Comment nous créons nos applis', 'pt': 'Como fazemos nossos apps'},
+    'values': {
+        'es': [('Reglas claras', 'Cada juego se explica en pocas frases y el resto lo vas descubriendo jugando, nivel a nivel.'),
+               ('Partidas cortas', 'Niveles de unos minutos, para jugar en el metro, en una pausa o antes de dormir. Tu progreso se guarda solo.'),
+               ('Sin registro', 'No hace falta cuenta ni correo. No recogemos datos personales y todo se queda en tu móvil.'),
+               ('Gratis y justo', 'Nuestras apps son gratuitas y se mantienen con anuncios, sin interrumpir a mitad de partida.'),
+               ('En tu idioma', 'Disponibles en español, inglés, francés y portugués.'),
+               ('Diseño para el móvil', 'Pensadas para jugar con una mano, en vertical o en horizontal, y que se vean bien en cualquier pantalla.')],
+        'en': [('Clear rules', 'Every game is explained in a few sentences, and you discover the rest by playing, level by level.'),
+               ('Short sessions', 'Levels take a few minutes, perfect for the bus, a break or before bed. Your progress saves automatically.'),
+               ('No sign-up', 'No account or email needed. We collect no personal data and everything stays on your phone.'),
+               ('Free and fair', 'Our apps are free and supported by ads that never interrupt you mid-game.'),
+               ('In your language', 'Available in English, Spanish, French and Portuguese.'),
+               ('Built for mobile', 'Made for one-handed play, portrait or landscape, and to look good on any screen.')],
+        'fr': [('Des règles claires', 'Chaque jeu s\'explique en quelques phrases, et tu découvres le reste en jouant, niveau après niveau.'),
+               ('Des parties courtes', 'Des niveaux de quelques minutes, pour le métro, une pause ou avant de dormir. Ta progression s\'enregistre toute seule.'),
+               ('Sans inscription', 'Pas de compte ni d\'e-mail. Nous ne collectons aucune donnée personnelle et tout reste sur ton téléphone.'),
+               ('Gratuit et équitable', 'Nos applis sont gratuites et financées par des publicités qui ne t\'interrompent jamais en pleine partie.'),
+               ('Dans ta langue', 'Disponibles en français, anglais, espagnol et portugais.'),
+               ('Pensé pour le mobile', 'Conçues pour jouer d\'une main, en portrait ou en paysage, et pour bien s\'afficher sur tous les écrans.')],
+        'pt': [('Regras claras', 'Cada jogo se explica em poucas frases, e o resto você descobre jogando, nível por nível.'),
+               ('Partidas curtas', 'Níveis de poucos minutos, para o metrô, uma pausa ou antes de dormir. Seu progresso é salvo sozinho.'),
+               ('Sem cadastro', 'Não precisa de conta nem e-mail. Não coletamos dados pessoais e tudo fica no seu celular.'),
+               ('Grátis e justo', 'Nossos apps são gratuitos e mantidos por anúncios que nunca interrompem no meio da partida.'),
+               ('No seu idioma', 'Disponíveis em português, inglês, espanhol e francês.'),
+               ('Feito para celular', 'Pensados para jogar com uma mão, na vertical ou na horizontal, e para ficar bonitos em qualquer tela.')],
+    },
+    'more_h': {'es': '¿Tienes una idea o has encontrado un fallo?', 'en': 'Got an idea or found a bug?', 'fr': 'Une idée ou un bug ?', 'pt': 'Tem uma ideia ou encontrou um erro?'},
+    'more': {'es': 'Escríbenos: leemos todos los mensajes y muchas mejoras de nuestros juegos salen de lo que nos contáis los jugadores.',
+             'en': 'Write to us: we read every message, and many improvements to our games come from what players tell us.',
+             'fr': 'Écris-nous : nous lisons tous les messages, et beaucoup d\'améliorations de nos jeux viennent de ce que nous racontent les joueurs.',
+             'pt': 'Escreva para nós: lemos todas as mensagens, e muitas melhorias dos nossos jogos vêm do que os jogadores nos contam.'},
     'apps': {'es': 'Apps', 'en': 'Apps', 'fr': 'Applis', 'pt': 'Apps'},
     'dd_short': {'es': 'Puzzle de lógica: encuentra las parejas de animales en el fondo del mar.',
                  'en': 'Logic puzzle: find the pairs of deep-sea animals hiding on the ocean floor.',
@@ -219,6 +251,9 @@ page('', HOME['title'], f'''
     <a class="app" href="deepdoku/"><img src="deepdoku/img/icon.webp" alt="" width="84" height="84">
       <div><h3>Deepdoku</h3>{each(lambda l: f'<p>{HOME["dd_short"][l]}</p><span class="tag">{HOME["dd_tag"][l]}</span>')}</div></a>
   </div>
+  <h2 class="section">{span(HOME["values_h"])}</h2>
+  {each(lambda l: '<div class="values">' + ''.join(f'<div class="value"><h3>{t}</h3><p>{d}</p></div>' for t, d in HOME["values"][l]) + '</div>')}
+  <div class="contact-box">{each(lambda l: f'<h2>{HOME["more_h"][l]}</h2><p>{HOME["more"][l]}</p>')}<a class="mail" href="mailto:{EMAIL}">{EMAIL}</a></div>
 </main>''', 'RRF-APPS: juegos y utilidades para Android.')
 
 # Deepdoku
