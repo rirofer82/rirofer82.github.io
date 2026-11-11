@@ -1,0 +1,87 @@
+/* RRF-APPS — web de desarrollador. Portada clara con el azul de la marca; la página de Deepdoku, en su azul abisal. */
+@font-face{font-family:"Titan One";src:url(TitanOne-Regular.ttf) format("truetype");font-display:swap}
+:root{
+  --bg:#ffffff; --bg-soft:#f2f6fd; --ink:#0f1b33; --ink-dim:#55617a; --line:#dfe6f2;
+  --brand:#2750fb; --brand-ink:#ffffff; --card:#ffffff;
+  --abyss:#081428; --abyss-2:#10264a; --glow:#5ff2ff;
+  --font-brand:"Montserrat",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --font-display:"Titan One","Nunito",ui-rounded,system-ui,sans-serif;
+  --font-body:"Nunito",ui-rounded,system-ui,-apple-system,"Segoe UI",sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#0b1220;--bg-soft:#111a2c;--ink:#e8eefb;--ink-dim:#9aa7c0;--line:#1e2a42;--brand:#6f8cff;--card:#121c30;color-scheme:dark}
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 var(--font-body)}
+a{color:var(--brand)}
+img{max-width:100%;display:block}
+.wrap{max-width:1040px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left));padding-right:max(20px,env(safe-area-inset-right))}
+.narrow{max-width:760px}
+
+/* idiomas: solo se ve el bloque del idioma activo (sin JS se ve el español) */
+[data-l]{display:none}
+html[data-lang="es"] [data-l="es"],html[data-lang="en"] [data-l="en"],html[data-lang="fr"] [data-l="fr"],html[data-lang="pt"] [data-l="pt"]{display:revert}
+
+header.top{border-bottom:1px solid var(--line);background:var(--bg)}
+header.top .wrap{display:flex;align-items:center;gap:16px;min-height:64px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-family:var(--font-brand);font-weight:900;font-size:19px;letter-spacing:.01em}
+.brand img{width:38px;height:38px;border-radius:10px;box-shadow:0 0 0 1px var(--line)}
+nav.links{display:flex;gap:18px;margin-left:auto;font-weight:700;font-size:15px}
+nav.links a{color:var(--ink-dim);text-decoration:none}
+nav.links a:hover{color:var(--brand)}
+.langs{display:flex;gap:2px;background:var(--bg-soft);border-radius:999px;padding:3px}
+.langs button{font:inherit;font-size:13px;font-weight:800;border:0;background:transparent;color:var(--ink-dim);padding:4px 10px;border-radius:999px;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.langs button[aria-pressed="true"]{background:var(--brand);color:var(--brand-ink)}
+
+footer.bottom{border-top:1px solid var(--line);margin-top:64px;color:var(--ink-dim);font-size:14px}
+footer.bottom .wrap{display:flex;gap:16px;flex-wrap:wrap;justify-content:space-between;padding-block:24px}
+
+/* portada */
+.hero{padding-block:28px 40px}
+.hero .banner{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:24px;margin-bottom:32px;max-height:420px}
+.hero h1{font-family:var(--font-brand);font-weight:900;font-size:clamp(36px,7vw,60px);line-height:1.05;margin:0 0 14px;text-wrap:balance}
+.hero h1 span{color:var(--brand)}
+.hero p{font-size:19px;color:var(--ink-dim);max-width:46ch;margin:0}
+h2.section{font-family:var(--font-brand);font-weight:800;font-size:26px;margin:40px 0 18px}
+.apps{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px}
+.app{display:grid;grid-template-columns:84px 1fr;gap:16px;align-items:start;padding:20px;border:1px solid var(--line);border-radius:20px;background:var(--card);text-decoration:none;color:inherit;transition:transform .15s,box-shadow .15s}
+.app:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(15,27,51,.08)}
+.app img{width:84px;height:84px;border-radius:20px}
+.app h3{margin:2px 0 4px;font-family:var(--font-display);font-weight:400;font-size:22px;color:var(--ink)}
+.app p{margin:0;color:var(--ink-dim);font-size:15px}
+.tag{display:inline-block;margin-top:10px;font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--brand);background:var(--bg-soft);padding:3px 10px;border-radius:999px}
+
+/* página de Deepdoku */
+.dd{background:radial-gradient(120% 80% at 50% 0%,var(--abyss-2),var(--abyss) 70%);color:#e6f3ff}
+.dd .wrap{padding-block:48px}
+.dd-head{display:flex;gap:18px;align-items:center;margin-bottom:24px}
+.dd-head img{width:88px;height:88px;border-radius:22px;box-shadow:0 0 24px rgba(95,242,255,.35)}
+.dd-head h1{font-family:var(--font-display);font-weight:400;font-size:clamp(34px,6vw,52px);margin:0;line-height:1}
+.dd-head p{margin:6px 0 0;color:#9fe9ff;font-weight:800;letter-spacing:.12em;text-transform:uppercase;font-size:13px}
+.feature{border-radius:20px;box-shadow:0 20px 60px rgba(0,0,0,.45);width:100%;height:auto;aspect-ratio:1024/500}
+.cta{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-top:24px}
+.btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--font-display);font-size:18px;color:#fff;text-decoration:none;border:3px solid #0b0a35;border-radius:999px;padding:8px 24px 10px;
+  background:linear-gradient(180deg,#7cf3ff 0%,#2ec9e6 48%,#1592c4 52%,#1aa6d6 100%);box-shadow:inset 0 3px 0 rgba(255,255,255,.55),0 4px 0 #0b0a35;text-shadow:0 2px 0 #0b5a86}
+.btn.soon{background:#1b2c4d;box-shadow:inset 0 2px 0 rgba(255,255,255,.12),0 4px 0 #0b0a35;text-shadow:none;cursor:default}
+.dd-body{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;margin-top:40px}
+@media (max-width:760px){.dd-body{grid-template-columns:1fr}}
+.dd-body h2{font-family:var(--font-display);font-weight:400;font-size:24px;margin:0 0 10px}
+.dd-body p,.dd-body li{color:#c9d8ee}
+.rules{list-style:none;padding:0;margin:0;display:grid;gap:12px}
+.rules li{display:grid;grid-template-columns:32px 1fr;gap:12px;align-items:start}
+.rules .n{width:32px;height:32px;border-radius:50%;display:grid;place-items:center;background:rgba(95,242,255,.15);border:1.5px solid rgba(95,242,255,.6);font-family:var(--font-display);color:var(--glow)}
+.rules b{color:var(--glow)}
+.shots{display:flex;gap:14px;overflow-x:auto;padding:6px 2px 14px;margin-top:36px;scroll-snap-type:x mandatory}
+.shots img{flex:none;width:min(220px,58vw);aspect-ratio:9/16;height:auto;border-radius:18px;box-shadow:0 10px 30px rgba(0,0,0,.4);scroll-snap-align:start}
+.dd a{color:var(--glow)}
+
+/* política */
+.legal{padding-block:48px}
+.legal h1{font-family:var(--font-brand);font-weight:800;font-size:clamp(30px,5vw,42px);line-height:1.1;margin:0 0 6px;text-wrap:balance}
+.legal .meta{color:var(--ink-dim);margin:0 0 28px;font-size:15px}
+.legal h2{font-size:20px;margin:32px 0 8px}
+.legal ul{padding-left:22px}
+.legal li{margin:4px 0}
+.legal .box{background:var(--bg-soft);border:1px solid var(--line);border-radius:16px;padding:16px 20px;margin:20px 0}
