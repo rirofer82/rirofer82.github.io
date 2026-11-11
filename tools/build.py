@@ -12,6 +12,7 @@ import os
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 LANGS = ['es', 'en', 'fr', 'pt']
+NAMES = {'es': 'Español', 'en': 'English', 'fr': 'Français', 'pt': 'Português'}
 EMAIL = 'rr2apps@gmail.com'
 DEV = 'RRF-APPS'
 PLAY_URL = 'https://play.google.com/store/apps/details?id=io.github.rirofer82.deepdoku'
@@ -181,7 +182,10 @@ def page(path, titles, body, desc, dark=False):
 <header class="top"><div class="wrap">
   <a class="brand" href="{up or './'}"><img src="{up}assets/img/rrf-logo.png" alt="">{DEV}</a>
   <nav class="links"><a href="{up or './'}#apps">{span(UI["nav_apps"])}</a><a href="{up}privacy/">{span(UI["nav_privacy"])}</a></nav>
-  <div class="langs" role="group" aria-label="Idioma / Language">{''.join(f'<button type="button" data-set="{l}" aria-pressed="{str(l == "es").lower()}">{l.upper()}</button>' for l in LANGS)}</div>
+  <div class="langs" id="langs">
+    <button type="button" class="lang-toggle" aria-expanded="false" aria-controls="lang-list" aria-label="Idioma / Language"><span class="cur">ES</span><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+    <div class="lang-list" id="lang-list" role="group" aria-label="Idioma / Language">{''.join(f'<button type="button" data-set="{l}" aria-pressed="{str(l == "es").lower()}"><b>{l.upper()}</b><span class="lname">{NAMES[l]}</span></button>' for l in LANGS)}</div>
+  </div>
 </div></header>
 {body}
 <footer class="bottom"><div class="wrap">

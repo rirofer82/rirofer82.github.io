@@ -11,15 +11,21 @@
   }
   function set(l){
     root.setAttribute('data-lang', l); root.lang = l === 'pt' ? 'pt-BR' : l;
-    var buttons = document.querySelectorAll('.langs button');
+    var buttons = document.querySelectorAll('.lang-list button');
     for (var i = 0; i < buttons.length; i++) buttons[i].setAttribute('aria-pressed', buttons[i].getAttribute('data-set') === l);
+    var cur = document.querySelector('.lang-toggle .cur'); if (cur) cur.textContent = l.toUpperCase();
     var t = document.querySelector('meta[name="title-' + l + '"]'); if (t) document.title = t.content;
   }
   set(pick());
   document.addEventListener('DOMContentLoaded', function(){
     set(root.getAttribute('data-lang'));
-    document.querySelectorAll('.langs button').forEach(function(b){
-      b.addEventListener('click', function(){ var l = b.getAttribute('data-set'); try { localStorage.setItem('rrf-lang', l); } catch (e) {} set(l); });
+    var box = document.getElementById('langs'), toggle = box && box.querySelector('.lang-toggle');
+    function open(v){ if (!box) return; box.classList.toggle('open', v); toggle.setAttribute('aria-expanded', v); }
+    if (toggle) toggle.addEventListener('click', function(e){ e.stopPropagation(); open(!box.classList.contains('open')); });
+    document.addEventListener('click', function(e){ if (box && !box.contains(e.target)) open(false); });
+    document.addEventListener('keydown', function(e){ if (e.key === 'Escape') open(false); });
+    document.querySelectorAll('.lang-list button').forEach(function(b){
+      b.addEventListener('click', function(){ var l = b.getAttribute('data-set'); try { localStorage.setItem('rrf-lang', l); } catch (e) {} set(l); open(false); });
     });
   });
 })();
