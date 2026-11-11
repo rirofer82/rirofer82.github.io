@@ -35,10 +35,10 @@ HOME = {
     'title': {'es': 'RRF-APPS', 'en': 'RRF-APPS', 'fr': 'RRF-APPS', 'pt': 'RRF-APPS'},
     'h1': {'es': 'Juegos y utilidades <span>para tu móvil</span>', 'en': 'Games and tools <span>for your phone</span>',
            'fr': 'Jeux et outils <span>pour ton mobile</span>', 'pt': 'Jogos e utilitários <span>para o seu celular</span>'},
-    'lead': {'es': 'RRF-APPS es un desarrollador independiente de Madrid. Hago juegos cortos para el móvil con reglas que se entienden en un minuto.',
-             'en': 'RRF-APPS is an independent developer from Madrid. I make short mobile games with rules you learn in a minute.',
-             'fr': 'RRF-APPS est un développeur indépendant basé à Madrid. Je crée des jeux mobiles courts, avec des règles qu\'on comprend en une minute.',
-             'pt': 'RRF-APPS é um desenvolvedor independente de Madri. Faço jogos curtos para celular, com regras que você aprende em um minuto.'},
+    'lead': {'es': 'Juegos cortos para el móvil, con reglas que se entienden en un minuto.',
+             'en': 'Short mobile games with rules you learn in a minute.',
+             'fr': 'Des jeux mobiles courts, avec des règles qu\'on comprend en une minute.',
+             'pt': 'Jogos curtos para celular, com regras que você aprende em um minuto.'},
     'apps': {'es': 'Apps', 'en': 'Apps', 'fr': 'Applis', 'pt': 'Apps'},
     'dd_short': {'es': 'Puzzle de lógica: encuentra las parejas de animales en el fondo del mar.',
                  'en': 'Logic puzzle: find the pairs of deep-sea animals hiding on the ocean floor.',
@@ -84,7 +84,7 @@ POLICY = {
     'es': {
         'title': f'Política de privacidad de {DEV}',
         'meta': f'Última actualización: {UPDATED["es"]}',
-        'intro': f'Esta política se aplica a todas las apps y juegos que {DEV}, un desarrollador particular, publica en Google Play (actualmente: {_apps("es")}). Resumen: <b>nuestras apps no piden registro ni recogen datos personales</b>; tu progreso se guarda solo en tu móvil, y los anuncios los sirve Google AdMob, que puede usar el ID de publicidad del dispositivo.',
+        'intro': f'Esta política se aplica a todas las apps y juegos que {DEV} publica en Google Play (actualmente: {_apps("es")}). Resumen: <b>nuestras apps no piden registro ni recogen datos personales</b>; tu progreso se guarda solo en tu móvil, y los anuncios los sirve Google AdMob, que puede usar el ID de publicidad del dispositivo.',
         'sections': [
             ('Responsable', f'<p>{DEV}. Contacto: <a href="mailto:{EMAIL}">{EMAIL}</a>.</p>'),
             ('Datos que no recogemos', '<p>Nuestras apps no tienen cuentas de usuario propias y no recogen tu nombre, correo electrónico, ubicación, contactos, fotos ni ningún otro dato personal. No tenemos servidores propios: no recibimos ni almacenamos información sobre ti.</p>'),
@@ -101,7 +101,7 @@ POLICY = {
     'en': {
         'title': f'{DEV} privacy policy',
         'meta': f'Last updated: {UPDATED["en"]}',
-        'intro': f'This policy applies to all apps and games that {DEV}, an individual developer, publishes on Google Play (currently: {_apps("en")}). In short: <b>our apps do not ask you to sign up and do not collect personal data</b>; your progress is stored only on your phone, and ads are served by Google AdMob, which may use the device\'s advertising ID.',
+        'intro': f'This policy applies to all apps and games that {DEV} publishes on Google Play (currently: {_apps("en")}). In short: <b>our apps do not ask you to sign up and do not collect personal data</b>; your progress is stored only on your phone, and ads are served by Google AdMob, which may use the device\'s advertising ID.',
         'sections': [
             ('Controller', f'<p>{DEV}. Contact: <a href="mailto:{EMAIL}">{EMAIL}</a>.</p>'),
             ('Data we do not collect', '<p>Our apps have no user accounts of their own and do not collect your name, email address, location, contacts, photos or any other personal data. We have no servers of our own: we do not receive or store any information about you.</p>'),
@@ -118,7 +118,7 @@ POLICY = {
     'fr': {
         'title': f'Politique de confidentialité de {DEV}',
         'meta': f'Dernière mise à jour : {UPDATED["fr"]}',
-        'intro': f'Cette politique s\'applique à toutes les applications et à tous les jeux que {DEV}, un développeur particulier, publie sur Google Play (actuellement : {_apps("fr")}). En résumé : <b>nos applications ne demandent pas de créer de compte et ne collectent pas de données personnelles</b> ; ta progression est enregistrée uniquement sur ton téléphone, et les publicités sont diffusées par Google AdMob, qui peut utiliser l\'identifiant publicitaire de l\'appareil.',
+        'intro': f'Cette politique s\'applique à toutes les applications et à tous les jeux que {DEV} publie sur Google Play (actuellement : {_apps("fr")}). En résumé : <b>nos applications ne demandent pas de créer de compte et ne collectent pas de données personnelles</b> ; ta progression est enregistrée uniquement sur ton téléphone, et les publicités sont diffusées par Google AdMob, qui peut utiliser l\'identifiant publicitaire de l\'appareil.',
         'sections': [
             ('Responsable', f'<p>{DEV}. Contact : <a href="mailto:{EMAIL}">{EMAIL}</a>.</p>'),
             ('Données que nous ne collectons pas', '<p>Nos applications n\'ont pas de comptes utilisateur propres et ne collectent ni ton nom, ni ton adresse e-mail, ni ta position, ni tes contacts, ni tes photos, ni aucune autre donnée personnelle. Nous n\'avons pas de serveurs : nous ne recevons ni ne stockons aucune information sur toi.</p>'),
@@ -135,7 +135,7 @@ POLICY = {
     'pt': {
         'title': f'Política de privacidade da {DEV}',
         'meta': f'Última atualização: {UPDATED["pt"]}',
-        'intro': f'Esta política se aplica a todos os apps e jogos que a {DEV}, um desenvolvedor individual, publica no Google Play (atualmente: {_apps("pt")}). Em resumo: <b>nossos apps não pedem cadastro e não coletam dados pessoais</b>; seu progresso fica salvo só no seu celular, e os anúncios são exibidos pelo Google AdMob, que pode usar o ID de publicidade do dispositivo.',
+        'intro': f'Esta política se aplica a todos os apps e jogos que a {DEV} publica no Google Play (atualmente: {_apps("pt")}). Em resumo: <b>nossos apps não pedem cadastro e não coletam dados pessoais</b>; seu progresso fica salvo só no seu celular, e os anúncios são exibidos pelo Google AdMob, que pode usar o ID de publicidade do dispositivo.',
         'sections': [
             ('Responsável', f'<p>{DEV}. Contato: <a href="mailto:{EMAIL}">{EMAIL}</a>.</p>'),
             ('Dados que não coletamos', '<p>Nossos apps não têm contas de usuário próprias e não coletam seu nome, e-mail, localização, contatos, fotos nem nenhum outro dado pessoal. Não temos servidores próprios: não recebemos nem armazenamos informações sobre você.</p>'),
