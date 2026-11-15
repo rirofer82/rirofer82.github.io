@@ -57,7 +57,7 @@ HOME = {
                  'en': 'General knowledge quiz: art, cinema, geography, history and science.',
                  'fr': 'Quiz de culture générale : art, cinéma, géographie, histoire et sciences.',
                  'pt': 'Perguntas de conhecimentos gerais: arte, cinema, geografia, história e ciência.'},
-    'cq_tag': {'es': 'Preguntas · En Google Play', 'en': 'Trivia · On Google Play', 'fr': 'Quiz · Sur Google Play', 'pt': 'Perguntas · No Google Play'},
+    'cq_tag': {'es': 'Quiz · Disponible', 'en': 'Quiz · Available', 'fr': 'Quiz · Disponible', 'pt': 'Quiz · Disponível'},
 }
 
 # Culture Quizzes (en cada idioma tiene el nombre de la app en ese idioma)
