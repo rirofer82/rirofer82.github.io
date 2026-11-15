@@ -1,5 +1,5 @@
 """Genera las páginas de la web: index.html (portada), privacy/index.html (política común a todas las apps)
-y una página por app (deepdoku/index.html).
+y una página por app (deepdoku/index.html, culture-quizzes/index.html).
 
 Los textos de cada idioma (es, en, fr, pt) están aquí abajo; cada página lleva los cuatro y
 assets/js/lang.js enseña el del navegador (o el que elija el visitante).
@@ -20,6 +20,8 @@ EMAIL = 'rr2apps@gmail.com'
 DEV = 'RRF-APPS'
 PLAY_URL = 'https://play.google.com/store/apps/details?id=io.github.rirofer82.deepdoku'
 PLAY_LIVE = False          # cámbialo a True cuando Deepdoku esté publicado en Google Play
+CQ_PLAY_URL = 'https://play.google.com/store/apps/details?id=com.rirofer.culturequestions'
+CQ_PLAY_LIVE = True        # Culture Quizzes ya está en Google Play (la versión nueva es una actualización)
 UPDATED = {'es': '11 de noviembre de 2026', 'en': '11 November 2026', 'fr': '11 novembre 2026', 'pt': '11 de novembro de 2026'}
 
 UI = {
@@ -51,6 +53,39 @@ HOME = {
                  'fr': 'Puzzle de logique : trouve les paires d\'animaux cachées au fond de la mer.',
                  'pt': 'Quebra-cabeça de lógica: encontre os pares de animais no fundo do mar.'},
     'dd_tag': {'es': 'Puzzle · Próximamente', 'en': 'Puzzle · Coming soon', 'fr': 'Puzzle · Bientôt', 'pt': 'Quebra-cabeça · Em breve'},
+    'cq_short': {'es': 'Preguntas de cultura general: arte, cine, geografía, historia y ciencia.',
+                 'en': 'General knowledge quiz: art, cinema, geography, history and science.',
+                 'fr': 'Quiz de culture générale : art, cinéma, géographie, histoire et sciences.',
+                 'pt': 'Perguntas de conhecimentos gerais: arte, cinema, geografia, história e ciência.'},
+    'cq_tag': {'es': 'Preguntas · En Google Play', 'en': 'Trivia · On Google Play', 'fr': 'Quiz · Sur Google Play', 'pt': 'Perguntas · No Google Play'},
+}
+
+# Culture Quizzes (en cada idioma tiene el nombre de la app en ese idioma)
+CQ = {
+    'name': {'es': 'Preguntas Cultura', 'en': 'Culture Quizzes', 'fr': 'Questions Culture', 'pt': 'Perguntas Cultura'},
+    'title': {'es': 'Preguntas Cultura: quiz de cultura general', 'en': 'Culture Quizzes: general knowledge trivia', 'fr': 'Questions Culture : quiz de culture générale', 'pt': 'Perguntas Cultura: quiz de conhecimentos gerais'},
+    'tag': {'es': 'Cultura general', 'en': 'General knowledge', 'fr': 'Culture générale', 'pt': 'Conhecimentos gerais'},
+    'lead': {'es': '¿Cuánto sabes? Más de 700 preguntas de cultura general en cinco categorías: Arte y Literatura, Cine, Geografía, Historia y Ciencia. Empiezan fáciles y se van poniendo difíciles.',
+             'en': 'How much do you know? Over 550 general knowledge questions in five categories: Art and Literature, Cinema, Geography, History and Science. They start easy and get harder as you go.',
+             'fr': 'Que savez-vous vraiment ? Près de 600 questions de culture générale dans cinq catégories : Art et Littérature, Cinéma, Géographie, Histoire et Sciences. Elles commencent faciles et deviennent de plus en plus difficiles.',
+             'pt': 'Quanto você sabe? Quase 700 perguntas de conhecimentos gerais em cinco categorias: Arte e Literatura, Cinema, Geografia, História e Ciência. Começam fáceis e vão ficando difíceis.'},
+    'rules_h': {'es': 'Cómo se juega', 'en': 'How to play', 'fr': 'Comment jouer', 'pt': 'Como jogar'},
+    'rules': {
+        'es': ['Elige una <b>categoría</b> y un cuestionario de <b>10, 24 o 40</b> preguntas.', 'Cada pregunta tiene <b>cuatro respuestas</b> y solo una es correcta.', 'Tienes <b>tres vidas</b>, y cuanto más avanzas, más difíciles son las preguntas y menos tiempo tienes.'],
+        'en': ['Choose a <b>category</b> and a quiz of <b>10, 24 or 40</b> questions.', 'Each question has <b>four answers</b> and only one is right.', 'You have <b>three lives</b>, and the further you get, the harder the questions and the less time you have.'],
+        'fr': ['Choisissez une <b>catégorie</b> et un quiz de <b>10, 24 ou 40</b> questions.', 'Chaque question propose <b>quatre réponses</b> et une seule est correcte.', 'Vous avez <b>trois vies</b>, et plus vous avancez, plus les questions sont difficiles et moins vous avez de temps.'],
+        'pt': ['Escolha uma <b>categoria</b> e um quiz de <b>10, 24 ou 40</b> perguntas.', 'Cada pergunta tem <b>quatro respostas</b> e só uma é correta.', 'Você tem <b>três vidas</b>, e quanto mais avança, mais difíceis ficam as perguntas e menos tempo você tem.'],
+    },
+    'more_h': {'es': 'Además', 'en': 'And also', 'fr': 'Et aussi', 'pt': 'E mais'},
+    'more': {
+        'es': ['Contrarreloj: todas las preguntas que puedas en 180 segundos, mezclando categorías.', 'Clasificación de Google Play Juegos para comparar tu puntuación.', 'Medallas por completar sin fallos los cuestionarios de cada categoría, y tu récord en cada una.', 'En español, inglés, francés, italiano y portugués, con preguntas pensadas para cada idioma.', 'En vertical y en horizontal, en móvil y en tablet.'],
+        'en': ['Time trial: as many questions as you can in 180 seconds, mixing all categories.', 'Google Play Games leaderboard to compare your score.', 'Medals for completing each category\'s quizzes without mistakes, and your record in each one.', 'In English, Spanish, French, Italian and Portuguese, with questions written for each language.', 'Portrait and landscape, on phones and tablets.'],
+        'fr': ['Contre-la-montre : un maximum de questions en 180 secondes, toutes catégories confondues.', 'Classement Google Play Jeux pour comparer votre score.', 'Des médailles pour les quiz réussis sans erreur dans chaque catégorie, et votre record dans chacune.', 'En français, anglais, espagnol, italien et portugais, avec des questions écrites pour chaque langue.', 'En mode portrait et paysage, sur téléphone et tablette.'],
+        'pt': ['Contra o relógio: o máximo de perguntas que puder em 180 segundos, misturando as categorias.', 'Ranking do Google Play Games para comparar sua pontuação.', 'Medalhas por completar sem erros os quizzes de cada categoria, e seu recorde em cada uma.', 'Em português, inglês, espanhol, francês e italiano, com perguntas feitas para cada idioma.', 'Na vertical e na horizontal, no celular e no tablet.'],
+    },
+    'alt_feature': {'es': 'Logo de Preguntas Cultura con dos capturas del juego', 'en': 'Culture Quizzes logo with two screenshots of the game',
+                    'fr': 'Logo de Questions Culture avec deux captures du jeu', 'pt': 'Logo do Perguntas Cultura com duas capturas do jogo'},
+    'alt_shot': {'es': 'Captura de Preguntas Cultura', 'en': 'Culture Quizzes screenshot', 'fr': 'Capture d\'écran de Questions Culture', 'pt': 'Captura de tela do Perguntas Cultura'},
 }
 
 DD = {
@@ -80,7 +115,7 @@ DD = {
 }
 
 # Apps a las que se aplica la política (añade aquí cada app nueva)
-APPS = ['Deepdoku']
+APPS = ['Deepdoku', 'Culture Quizzes']
 
 # Política de privacidad común a todas las apps: (título de sección, HTML) por idioma
 def _apps(l):
@@ -210,9 +245,9 @@ def page(path, titles, body, desc, dark=False):
     print(out)
 
 
-def play_button(l):
-    if PLAY_LIVE:
-        return f'<a class="btn" href="{PLAY_URL}">{UI["play"][l]}</a>'
+def play_button(l, url=PLAY_URL, live=None):
+    if PLAY_LIVE if live is None else live:
+        return f'<a class="btn" href="{url}">{UI["play"][l]}</a>'
     return f'<span class="btn soon">{UI["soon"][l]}</span>'
 
 
@@ -224,6 +259,8 @@ page('', HOME['title'], f'''
   <div class="apps">
     <a class="app" href="deepdoku/"><img src="deepdoku/img/icon.webp" alt="" width="84" height="84">
       <div><h3>Deepdoku</h3>{each(lambda l: f'<p>{HOME["dd_short"][l]}</p><span class="tag">{HOME["dd_tag"][l]}</span>')}</div></a>
+    <a class="app" href="culture-quizzes/"><img src="culture-quizzes/img/icon.webp" alt="" width="84" height="84">
+      <div>{each(lambda l: f'<h3>{CQ["name"][l]}</h3><p>{HOME["cq_short"][l]}</p><span class="tag">{HOME["cq_tag"][l]}</span>')}</div></a>
   </div>
   <div class="contact-box">{each(lambda l: f'<h2>{HOME["more_h"][l]}</h2><p>{HOME["more"][l]}</p>')}<a class="mail" href="mailto:{EMAIL}">{EMAIL}</a></div>
 </main>''', 'RRF-APPS: juegos y utilidades para Android.')
@@ -239,6 +276,18 @@ page('deepdoku', DD['title'], f'''
   </div>
   {each(lambda l: '<div class="shots">' + ''.join(f'<img src="img/{l}-{n}.webp" alt="{DD["alt_shot"][l]}" width="540" height="960" loading="lazy">' for n in ("1_portada", "2_inmersion", "3_partida", "4_victoria", "5_niveles")) + '</div>')}
 </div></main>''', 'Deepdoku: puzzle de lógica de parejas de animales de las profundidades para Android.', dark=True)
+
+# Culture Quizzes (mismo diseño que la página de Deepdoku)
+page('culture-quizzes', CQ['title'], f'''
+<main class="dd"><div class="wrap">
+  <div class="dd-head"><img src="img/icon.webp" alt="" width="88" height="88">{each(lambda l: f'<div><h1>{CQ["name"][l]}</h1><p>{CQ["tag"][l]}</p></div>')}</div>
+  {each(lambda l: f'<img class="feature" src="img/feature-{l}.webp" alt="{CQ["alt_feature"][l]}" width="1024" height="500"><div class="cta">{play_button(l, CQ_PLAY_URL, CQ_PLAY_LIVE)}<a href="../privacy/">{UI["privacy"][l]}</a></div>')}
+  <div class="dd-body">
+    {each(lambda l: f'<p>{CQ["lead"][l]}</p><h2>{CQ["rules_h"][l]}</h2><ul class="rules">' + ''.join(f'<li><span class="n">{i + 1}</span><span>{r}</span></li>' for i, r in enumerate(CQ["rules"][l])) + '</ul>')}
+    {each(lambda l: f'<h2>{CQ["more_h"][l]}</h2><ul>' + ''.join(f'<li>{x}</li>' for x in CQ["more"][l]) + '</ul>')}
+  </div>
+  {each(lambda l: '<div class="shots">' + ''.join(f'<img src="img/{l}-{n}.webp" alt="{CQ["alt_shot"][l]}" width="540" height="960" loading="lazy">' for n in ("1_categories", "2_question", "3_right_answer", "4_result", "5_time_trial", "6_achievements")) + '</div>')}
+</div></main>''', 'Culture Quizzes: juego de preguntas de cultura general para Android.', dark=True)
 
 # política de privacidad
 def policy(l):
