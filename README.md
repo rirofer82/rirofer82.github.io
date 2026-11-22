@@ -22,6 +22,6 @@ git commit -am "…" && git push
 ```
 
 - **App nueva:** añádela a `APPS` (aparece en la política), crea su página copiando el bloque de Deepdoku y su tarjeta en la portada.
-- **Deepdoku ya publicado:** pon `PLAY_LIVE = True` para que el botón enlace a Google Play.
+- **Botones de Google Play:** `PLAY_LIVE` (Deepdoku) y `CQ_PLAY_LIVE` (Culture Quizzes) están en `True` porque las dos apps ya están publicadas; con `False` el botón muestra «Muy pronto en Google Play».
 - **Imágenes de Culture Quizzes:** salen de `fastlane/metadata/android/<idioma>/images` del repo culture-quizzes-javascript (`npm run store` allí), pasadas a WebP en `culture-quizzes/img/`.
 - **Cambios en la política:** actualiza `UPDATED` con la fecha.

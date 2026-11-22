@@ -19,7 +19,7 @@ NAMES = {'es': 'Español', 'en': 'English', 'fr': 'Français', 'pt': 'Português
 EMAIL = 'rr2apps@gmail.com'
 DEV = 'RRF-APPS'
 PLAY_URL = 'https://play.google.com/store/apps/details?id=io.github.rirofer82.deepdoku'
-PLAY_LIVE = False          # cámbialo a True cuando Deepdoku esté publicado en Google Play
+PLAY_LIVE = True           # Deepdoku ya está publicado en Google Play (False muestra «Muy pronto en Google Play»)
 CQ_PLAY_URL = 'https://play.google.com/store/apps/details?id=com.rirofer.culturequestions'
 CQ_PLAY_LIVE = True        # Culture Quizzes ya está en Google Play (la versión nueva es una actualización)
 UPDATED = {'es': '11 de noviembre de 2026', 'en': '11 November 2026', 'fr': '11 novembre 2026', 'pt': '11 de novembro de 2026'}
@@ -52,7 +52,7 @@ HOME = {
                  'en': 'Logic puzzle: find the pairs of deep-sea animals hiding on the ocean floor.',
                  'fr': 'Puzzle de logique : trouve les paires d\'animaux cachées au fond de la mer.',
                  'pt': 'Quebra-cabeça de lógica: encontre os pares de animais no fundo do mar.'},
-    'dd_tag': {'es': 'Puzzle · Próximamente', 'en': 'Puzzle · Coming soon', 'fr': 'Puzzle · Bientôt', 'pt': 'Quebra-cabeça · Em breve'},
+    'dd_tag': {'es': 'Puzzle · Disponible', 'en': 'Puzzle · Available', 'fr': 'Puzzle · Disponible', 'pt': 'Quebra-cabeça · Disponível'},
     'cq_short': {'es': 'Preguntas de cultura general: arte, cine, geografía, historia y ciencia.',
                  'en': 'General knowledge quiz: art, cinema, geography, history and science.',
                  'fr': 'Quiz de culture générale : art, cinéma, géographie, histoire et sciences.',
