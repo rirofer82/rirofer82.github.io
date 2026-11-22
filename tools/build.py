@@ -22,7 +22,9 @@ PLAY_URL = 'https://play.google.com/store/apps/details?id=io.github.rirofer82.de
 PLAY_LIVE = True           # Deepdoku ya está publicado en Google Play (False muestra «Muy pronto en Google Play»)
 CQ_PLAY_URL = 'https://play.google.com/store/apps/details?id=com.rirofer.culturequestions'
 CQ_PLAY_LIVE = True        # Culture Quizzes ya está en Google Play (la versión nueva es una actualización)
-UPDATED = {'es': '11 de noviembre de 2026', 'en': '11 November 2026', 'fr': '11 novembre 2026', 'pt': '11 de novembro de 2026'}
+BR_PLAY_URL = 'https://play.google.com/store/apps/details?id=io.github.rirofer82.boxrally'
+BR_PLAY_LIVE = False       # Box Rally todavía no está publicado: el botón muestra «Muy pronto en Google Play»
+UPDATED = {'es': '22 de noviembre de 2026', 'en': '22 November 2026', 'fr': '22 novembre 2026', 'pt': '22 de novembro de 2026'}
 
 UI = {
     'nav_apps': {'es': 'Apps', 'en': 'Apps', 'fr': 'Applis', 'pt': 'Apps'},
@@ -58,6 +60,38 @@ HOME = {
                  'fr': 'Quiz de culture générale : art, cinéma, géographie, histoire et sciences.',
                  'pt': 'Perguntas de conhecimentos gerais: arte, cinema, geografia, história e ciência.'},
     'cq_tag': {'es': 'Quiz · Disponible', 'en': 'Quiz · Available', 'fr': 'Quiz · Disponible', 'pt': 'Quiz · Disponível'},
+    'br_short': {'es': 'Reparte paquetes por la ciudad, persigue ladrones y gana carreras al volante.',
+                 'en': 'Deliver parcels across town, chase thieves and win races behind the wheel.',
+                 'fr': 'Livre des colis en ville, poursuis des voleurs et gagne des courses au volant.',
+                 'pt': 'Entregue pacotes pela cidade, persiga ladrões e vença corridas ao volante.'},
+    'br_tag': {'es': 'Carreras · Próximamente', 'en': 'Racing · Coming soon', 'fr': 'Course · Bientôt', 'pt': 'Corrida · Em breve'},
+}
+
+# Box Rally (las capturas son horizontales: 1920 × 1080 en la ficha, 960 × 540 aquí)
+BR = {
+    'title': {'es': 'Box Rally: repartos y carreras', 'en': 'Box Rally: deliveries and races', 'fr': 'Box Rally : livraisons et courses', 'pt': 'Box Rally: entregas e corridas'},
+    'tag': {'es': 'Entregas · Persecuciones · Carreras', 'en': 'Deliveries · Chases · Races', 'fr': 'Livraisons · Poursuites · Courses', 'pt': 'Entregas · Perseguições · Corridas'},
+    'lead': {'es': 'Eres el nuevo repartidor de Box Rally, una pequeña empresa de mensajería que se juega el contrato de la ciudad frente a Flash Logística, la gran competidora que no siempre juega limpio. Coge el volante, sigue la flecha y lleva cada paquete a tiempo.',
+             'en': 'You are the new driver at Box Rally, a small courier company fighting for the city contract against Flash Logistics, a big rival that does not always play fair. Take the wheel, follow the arrow and get every parcel there on time.',
+             'fr': 'Tu es le nouveau livreur de Box Rally, une petite société de livraison qui joue le contrat de la ville face à Flash Logistique, un grand concurrent qui ne joue pas toujours franc jeu. Prends le volant, suis la flèche et livre chaque colis à temps.',
+             'pt': 'Você é o novo entregador da Box Rally, uma pequena empresa de entregas que disputa o contrato da cidade com a Flash Logística, uma grande concorrente que nem sempre joga limpo. Assuma o volante, siga a seta e leve cada pacote a tempo.'},
+    'jobs_h': {'es': 'Muchos tipos de encargo', 'en': 'Plenty of job types', 'fr': 'De nombreux types de missions', 'pt': 'Muitos tipos de serviço'},
+    'jobs': {
+        'es': ['Entregas y rutas con varias paradas por toda la ciudad.', 'Urgentes, con el reloj en contra.', 'Frágiles: cada golpe se descuenta del pago.', 'Huidas de las furgonetas de Flash y persecuciones de ladrones.', 'Carreras de paquetes y la Copa de Repartidores en el circuito del Polígono.'],
+        'en': ['Deliveries and routes with several stops all over town.', 'Urgent jobs against the clock.', 'Fragile loads: every bump comes off your pay.', 'Getaways from the Flash vans and chases after thieves.', 'Parcel races and the Couriers Cup at the Industrial Park circuit.'],
+        'fr': ['Livraisons et tournées avec plusieurs arrêts dans toute la ville.', 'Urgences, contre la montre.', 'Colis fragiles : chaque choc est retenu sur ta paie.', 'Fuites face aux fourgons de Flash et poursuites de voleurs.', 'Courses de colis et Coupe des Livreurs sur le circuit de la Zone Industrielle.'],
+        'pt': ['Entregas e rotas com várias paradas pela cidade toda.', 'Urgentes, contra o relógio.', 'Frágeis: cada batida é descontada do pagamento.', 'Fugas das vans da Flash e perseguições a ladrões.', 'Corridas de pacotes e a Copa dos Entregadores no circuito do Distrito Industrial.'],
+    },
+    'more_h': {'es': 'Una historia y un taller', 'en': 'A story and a garage', 'fr': 'Une histoire et un garage', 'pt': 'Uma história e uma oficina'},
+    'more': {
+        'es': ['Una historia en 10 capítulos; al terminarla puedes seguir con encargos libres.', 'El taller de Toni: mejora motor, frenos, agarre y resistencia, compra furgoneta, moto o deportivo y personaliza tu vehículo.', 'Controles táctiles grandes, en vertical o en horizontal, y la partida se guarda sola.', 'En español, inglés, francés y portugués.'],
+        'en': ['A story in 10 chapters; once it is over you can keep taking free jobs.', 'Tony\'s garage: upgrade engine, brakes, grip and toughness, buy a van, a scooter or a sports car and customize your vehicle.', 'Big touch controls in portrait or landscape, and automatic saving.', 'In English, Spanish, French and Portuguese.'],
+        'fr': ['Une histoire en 10 chapitres ; une fois terminée, tu peux continuer les courses libres.', 'Le garage de Tony : améliore moteur, freins, adhérence et résistance, achète un fourgon, un scooter ou une sportive et personnalise ton véhicule.', 'Grandes commandes tactiles, en portrait ou en paysage, et sauvegarde automatique.', 'En français, anglais, espagnol et portugais.'],
+        'pt': ['Uma história em 10 capítulos; depois dela você pode continuar fazendo serviços livres.', 'A oficina do Toninho: melhore motor, freios, aderência e resistência, compre uma van, uma moto ou um esportivo e personalize seu veículo.', 'Controles de toque grandes, na vertical ou na horizontal, e salvamento automático.', 'Em português, inglês, espanhol e francês.'],
+    },
+    'alt_feature': {'es': 'Una camioneta roja derrapa por la ciudad perseguida por una furgoneta, con el título Box Rally', 'en': 'A red pickup drifts through the city chased by a van, with the Box Rally title',
+                    'fr': 'Un pick-up rouge dérape en ville, poursuivi par un fourgon, avec le titre Box Rally', 'pt': 'Uma picape vermelha derrapa pela cidade perseguida por uma van, com o título Box Rally'},
+    'alt_shot': {'es': 'Captura de Box Rally', 'en': 'Box Rally screenshot', 'fr': 'Capture d\'écran de Box Rally', 'pt': 'Captura de tela do Box Rally'},
 }
 
 # Culture Quizzes (en cada idioma tiene el nombre de la app en ese idioma)
@@ -115,7 +149,7 @@ DD = {
 }
 
 # Apps a las que se aplica la política (añade aquí cada app nueva)
-APPS = ['Deepdoku', 'Culture Quizzes']
+APPS = ['Deepdoku', 'Culture Quizzes', 'Box Rally']
 
 # Política de privacidad común a todas las apps: (título de sección, HTML) por idioma
 def _apps(l):
@@ -261,6 +295,8 @@ page('', HOME['title'], f'''
       <div><h3>Deepdoku</h3>{each(lambda l: f'<p>{HOME["dd_short"][l]}</p><span class="tag">{HOME["dd_tag"][l]}</span>')}</div></a>
     <a class="app" href="culture-quizzes/"><img src="culture-quizzes/img/icon.webp" alt="" width="84" height="84">
       <div>{each(lambda l: f'<h3>{CQ["name"][l]}</h3><p>{HOME["cq_short"][l]}</p><span class="tag">{HOME["cq_tag"][l]}</span>')}</div></a>
+    <a class="app" href="box-rally/"><img src="box-rally/img/icon.webp" alt="" width="84" height="84">
+      <div><h3>Box Rally</h3>{each(lambda l: f'<p>{HOME["br_short"][l]}</p><span class="tag soon">{HOME["br_tag"][l]}</span>')}</div></a>
   </div>
   <div class="contact-box">{each(lambda l: f'<h2>{HOME["more_h"][l]}</h2><p>{HOME["more"][l]}</p>')}<a class="mail" href="mailto:{EMAIL}">{EMAIL}</a></div>
 </main>''', 'RRF-APPS: juegos y utilidades para Android.')
@@ -288,6 +324,18 @@ page('culture-quizzes', CQ['title'], f'''
   </div>
   {each(lambda l: '<div class="shots">' + ''.join(f'<img src="img/{l}-{n}.webp" alt="{CQ["alt_shot"][l]}" width="540" height="960" loading="lazy">' for n in ("1_categories", "2_question", "3_right_answer", "4_result", "5_time_trial", "6_achievements")) + '</div>')}
 </div></main>''', 'Culture Quizzes: juego de preguntas de cultura general para Android.', dark=True)
+
+# Box Rally (mismo diseño que las otras páginas; capturas horizontales)
+page('box-rally', BR['title'], f'''
+<main class="dd"><div class="wrap">
+  <div class="dd-head"><img src="img/icon.webp" alt="" width="88" height="88"><div><h1>Box Rally</h1><p>{span(BR["tag"])}</p></div></div>
+  {each(lambda l: f'<img class="feature" src="img/feature-{l}.webp" alt="{BR["alt_feature"][l]}" width="1024" height="500"><div class="cta">{play_button(l, BR_PLAY_URL, BR_PLAY_LIVE)}<a href="../privacy/">{UI["privacy"][l]}</a></div>')}
+  <div class="dd-body">
+    {each(lambda l: f'<p>{BR["lead"][l]}</p><h2>{BR["jobs_h"][l]}</h2><ul>' + ''.join(f'<li>{x}</li>' for x in BR["jobs"][l]) + '</ul>')}
+    {each(lambda l: f'<h2>{BR["more_h"][l]}</h2><ul>' + ''.join(f'<li>{x}</li>' for x in BR["more"][l]) + '</ul>')}
+  </div>
+  {each(lambda l: '<div class="shots wide">' + ''.join(f'<img src="img/{l}-{n}.webp" alt="{BR["alt_shot"][l]}" width="960" height="540" loading="lazy">' for n in ("1_menu", "2_tablon", "3_reparto", "4_carrera", "5_persecucion", "6_circuito", "7_historia", "8_taller")) + '</div>')}
+</div></main>''', 'Box Rally: juego de repartos y carreras en coche por la ciudad para Android.', dark=True)
 
 # política de privacidad
 def policy(l):

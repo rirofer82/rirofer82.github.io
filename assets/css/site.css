@@ -133,3 +133,5 @@ a.btn:hover{background:#24395f}
   footer.bottom{margin-top:40px}
   footer.bottom .wrap{flex-direction:column;gap:6px}
 }
+.shots.wide img{width:min(440px,82vw);aspect-ratio:16/9}
+.tag.soon{opacity:.85}
